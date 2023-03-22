@@ -1,0 +1,16 @@
+package com.projetosjava.logistic.services;
+
+import org.springframework.stereotype.Service;
+
+import com.projetosjava.logistic.repository.entrega_rep;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@Service
+public class entrega_srvc {
+
+	private entrega_rep entregaRepository;
+	
+	
+}

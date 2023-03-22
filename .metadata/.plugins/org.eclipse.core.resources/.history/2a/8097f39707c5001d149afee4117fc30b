@@ -1,0 +1,5 @@
+package com.projetosjava.logistic.repository;
+
+public interface cliente_rep {
+
+}

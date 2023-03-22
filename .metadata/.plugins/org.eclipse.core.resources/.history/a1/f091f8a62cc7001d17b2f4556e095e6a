@@ -1,0 +1,27 @@
+package com.projetosjava.logistic.services;
+
+import javax.naming.spi.DirStateFactory.Result;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.projetosjava.logistic.model.entrega_mod;
+import com.projetosjava.logistic.repository.entrega_rep;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@Service
+public class entrega_srvc {
+
+	private entrega_rep entregaRepository;
+	
+	@Transactional
+	public entrega_mod criaEntrega(entrega_mod entrega) {
+       
+	   return entregaRepository.save(entrega);
+				
+	}
+	
+	
+}

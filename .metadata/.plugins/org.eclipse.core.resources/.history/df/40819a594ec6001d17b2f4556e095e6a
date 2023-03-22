@@ -1,0 +1,16 @@
+package com.projetosjava.logistic.exceptionhandler;
+
+import java.time.LocalDateTime;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class problema {
+	
+	private Integer status;
+	private LocalDateTime dataHora;
+	private String descricao;
+
+}

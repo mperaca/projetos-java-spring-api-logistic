@@ -1,0 +1,11 @@
+package com.projetosjava.logistic.model;
+
+public class entrega_mod {
+	
+	private Long id;
+	
+	private cliente_mod cliente;
+	
+	private destinatario_mod destinatario;
+
+}

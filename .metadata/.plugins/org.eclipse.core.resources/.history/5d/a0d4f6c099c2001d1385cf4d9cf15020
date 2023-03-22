@@ -1,0 +1,8 @@
+package com.projetosjava.logistic.controller;
+
+public class cliente_ctl {
+
+	public String listar() {
+		return "Teste";
+	}
+}

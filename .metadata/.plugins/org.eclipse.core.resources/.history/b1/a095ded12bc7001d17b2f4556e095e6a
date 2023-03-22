@@ -1,0 +1,8 @@
+package com.projetosjava.logistic.services;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class entrega_srvc {
+
+}

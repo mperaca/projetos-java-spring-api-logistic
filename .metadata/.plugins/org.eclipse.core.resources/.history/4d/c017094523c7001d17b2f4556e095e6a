@@ -1,0 +1,5 @@
+package com.projetosjava.logistic.exception;
+
+public class negocio_excpt extends RuntimeException {
+
+}

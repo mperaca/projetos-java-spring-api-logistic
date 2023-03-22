@@ -1,0 +1,32 @@
+package com.projetosjava.logistic.services;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.projetosjava.logistic.model.cliente_mod;
+import com.projetosjava.logistic.repository.cliente_rep;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@Service
+public class cliente_srvc {
+
+	private cliente_rep clienteRepository;
+	
+	@Transactional
+	public cliente_mod salvar(cliente_mod cliente) {
+		
+		boolean emailEncontrado = clienteRepository.findByEmail(cliente.getEmail())
+				                                   .stream()
+				                                   .anyMatch(clienteExistente -> !clienteExistente.equals(cliente));
+		
+		return clienteRepository.save(cliente);
+		
+	}
+	
+	@Transactional
+	public void excluir(Long id) {
+		clienteRepository.deleteById(id);
+	}
+}

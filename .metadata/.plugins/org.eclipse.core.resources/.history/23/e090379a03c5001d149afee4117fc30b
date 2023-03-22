@@ -1,0 +1,33 @@
+package com.projetosjava.logistic.controller;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.projetosjava.logistic.modelo.cliente_mod;
+
+@RestController
+public class cliente_ctl {
+	
+	private EntityManager manager;
+
+	@GetMapping("/logisticapi/clientes")
+	public List<cliente_mod> listar() {
+	}
+	
+	@GetMapping("/logisticapi/clientes/{id}")
+	public cliente_mod retornaCliente(@PathVariable int id) {
+		var cliente = new cliente_mod();
+		cliente.setId(1L);
+		cliente.setNome("Marcelo Peraça");
+		cliente.setTelefone("53 99911 3227");
+		cliente.setEmail("mperaca2000@gmail.com");
+		return cliente;
+	}
+}

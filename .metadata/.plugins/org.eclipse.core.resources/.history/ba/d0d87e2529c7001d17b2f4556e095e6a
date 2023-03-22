@@ -1,0 +1,19 @@
+package com.projetosjava.logistic.model;
+
+import javax.persistence.Embeddable;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Embeddable
+public class destinatario_mod {
+	
+	private String nome;
+	private String logradouro;
+	private String numero;
+	private String complemento;
+	private String bairro;
+
+}

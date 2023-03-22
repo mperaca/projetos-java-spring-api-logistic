@@ -1,0 +1,17 @@
+package com.projetosjava.logistic.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.projetosjava.logistic.modelo.cliente_mod;
+
+@RestController
+public class cliente_ctl {
+
+	@GetMapping("/clientes")
+	public List<cliente_mod> listar() {
+		return null;
+	}
+}

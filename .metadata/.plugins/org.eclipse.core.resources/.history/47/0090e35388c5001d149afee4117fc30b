@@ -1,0 +1,44 @@
+package com.projetosjava.logistic.controller;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.projetosjava.logistic.model.cliente_mod;
+import com.projetosjava.logistic.repository.cliente_rep;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@RestController
+public class cliente_ctl {
+	
+	private cliente_rep clienteRepository;
+
+	@GetMapping("/logisticapi/clientes")
+	public List<cliente_mod> listar() {
+		return clienteRepository.findAll();
+	}
+	
+	@GetMapping("/logisticapi/clientes/{id}")
+	public ResponseEntity<cliente_mod> retornaCliente(@PathVariable Long id) {
+		Optional<cliente_mod> cliente = clienteRepository.findById(id);
+		
+		if (cliente.isPresent()) {
+			return ResponseEntity.ok(cliente.get());					
+		} else {
+			return ResponseEntity.notFound().build();
+		}
+		
+	}
+}
+ 

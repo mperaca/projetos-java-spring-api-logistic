@@ -1,0 +1,36 @@
+package com.projetosjava.logistic.controller;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.projetosjava.logistic.modelo.cliente_mod;
+
+@RestController
+public class cliente_ctl {
+
+	@GetMapping("/clientes")
+	public List<cliente_mod> listar() {
+		var cliente1 = new cliente_mod();
+		cliente1.setId(1L);
+		cliente1.setNome("Marcelo Peraça");
+		cliente1.setTelefone("53 99911 3227");
+		cliente1.setEmail("mperaca2000@gmail.com");
+		
+		var cliente2 = new cliente_mod();
+		cliente2.setId(2L);
+		cliente2.setNome("Kelly Bazareli");
+		cliente2.setTelefone("51 9988 13254");
+		cliente2.setEmail("kelly@gmail.com");
+		
+		
+		return Arrays.asList(cliente1,cliente2);
+	}
+	
+	@GetMapping("/clientes/id")
+	public cliente_mod retornaCliente() {
+		
+	}
+}

@@ -1,0 +1,11 @@
+package com.projetosjava.logistic.modelo;
+
+public class cliente_mod {
+
+	private Long id;
+	private String nome;
+	private String email;
+	private String telefone;
+	
+}
+

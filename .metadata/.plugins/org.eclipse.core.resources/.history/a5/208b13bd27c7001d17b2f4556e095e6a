@@ -1,0 +1,24 @@
+package com.projetosjava.logistic.model;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+import javax.persistence.Entity;
+
+@Entity
+public class entrega_mod {
+	
+	private Long id;
+	
+	private cliente_mod cliente;
+	
+	private destinatario_mod destinatario;
+	
+	private BigDecimal taxa;
+	
+	private statusEntrega status;
+
+	private LocalDateTime dataPedido;
+	
+	private LocalDateTime dataFinalizacao;
+}
